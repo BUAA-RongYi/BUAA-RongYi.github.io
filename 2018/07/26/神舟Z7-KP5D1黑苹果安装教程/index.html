@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前言在做这个教程之前，在自己的笔记本电脑上尝试了很多次，期间重启、更换镜像、爬帖等等，直到做出了我认为暂时比较完美的黑苹果系统。特此记录一下自己这段时间的制作流程和心得体会。坚持不懈，不断试错 这是自己这段时间总结的制作黑苹果的核心启发，希望对读者有些帮助，在黑苹果的道路上共勉！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="神舟Z7-KP5D1黑苹果安装教程">
+<meta property="og:url" content="http://yoursite.com/2018/07/26/神舟Z7-KP5D1黑苹果安装教程/index.html">
+<meta property="og:site_name" content="戎小毅">
+<meta property="og:description" content="前言在做这个教程之前，在自己的笔记本电脑上尝试了很多次，期间重启、更换镜像、爬帖等等，直到做出了我认为暂时比较完美的黑苹果系统。特此记录一下自己这段时间的制作流程和心得体会。坚持不懈，不断试错 这是自己这段时间总结的制作黑苹果的核心启发，希望对读者有些帮助，在黑苹果的道路上共勉！">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-24T02:00:20.509Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="神舟Z7-KP5D1黑苹果安装教程">
+<meta name="twitter:description" content="前言在做这个教程之前，在自己的笔记本电脑上尝试了很多次，期间重启、更换镜像、爬帖等等，直到做出了我认为暂时比较完美的黑苹果系统。特此记录一下自己这段时间的制作流程和心得体会。坚持不懈，不断试错 这是自己这段时间总结的制作黑苹果的核心启发，希望对读者有些帮助，在黑苹果的道路上共勉！">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/07/26/神舟Z7-KP5D1黑苹果安装教程/"/>
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "b20db884"
+    });
+  daovoice('update');
+  </script>
+
+  <title>神舟Z7-KP5D1黑苹果安装教程 | 戎小毅</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">戎小毅</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">三千微尘里，吾宁爱与憎</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-something">
+          <a href="/something/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
+            
+            有料
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-social">
+          <a href="/social/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-address-card"></i> <br />
+            
+            联系方式
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/26/神舟Z7-KP5D1黑苹果安装教程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jack">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/blog-logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="戎小毅">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">神舟Z7-KP5D1黑苹果安装教程</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-26T15:30:50+08:00">
+                2018-07-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/26/神舟Z7-KP5D1黑苹果安装教程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/07/26/神舟Z7-KP5D1黑苹果安装教程/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,039
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在做这个教程之前，在自己的笔记本电脑上尝试了很多次，期间重启、更换镜像、爬帖等等，直到做出了我认为暂时比较完美的黑苹果系统。特此记录一下自己这段时间的制作流程和心得体会。<br><strong>坚持不懈，不断试错</strong> 这是自己这段时间总结的制作黑苹果的核心启发，希望对读者有些帮助，在黑苹果的道路上共勉！<a id="more"></a></p>
+<p>下面是具体的制作过程：</p>
+<blockquote>
+<ul>
+<li>准备工作</li>
+<li>制作流程</li>
+<li>后期调试</li>
+</ul>
+</blockquote>
+<hr>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="准备以下几项工具-Todo-列表"><a href="#准备以下几项工具-Todo-列表" class="headerlink" title="准备以下几项工具 Todo 列表"></a>准备以下几项工具 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#13-待办事宜-todo-列表" target="_blank" rel="noopener">Todo 列表</a></h2><ul>
+<li style="list-style: none"><input type="checkbox" checked> 一个大于8G的U盘</li>
+<li style="list-style: none"><input type="checkbox" checked> Windows下的工具<ul>
+<li style="list-style: none"><input type="checkbox" checked> TransMac</li>
+<li style="list-style: none"><input type="checkbox" checked> DiskGenius</li>
+<li style="list-style: none"><input type="checkbox" checked> EasyUEFI_Free<br>[x] MAC OS下的工具</li>
+<li style="list-style: none"><input type="checkbox" checked> Clover Configurator</li>
+<li style="list-style: none"><input type="checkbox" checked> Kext Utility.app</li>
+</ul>
+</li>
+<li style="list-style: none"><input type="checkbox" checked> 系统镜像</li>
+</ul>
+<h1 id="制作流程"><a href="#制作流程" class="headerlink" title="制作流程"></a>制作流程</h1><h2 id="在Windows下安装TransMac"><a href="#在Windows下安装TransMac" class="headerlink" title="在Windows下安装TransMac"></a>在Windows下安装TransMac</h2><p>安装完成后，右键以管理员身份运行该软件</p>
+<h2 id="制作MAC-OS安装盘"><a href="#制作MAC-OS安装盘" class="headerlink" title="制作MAC OS安装盘"></a>制作MAC OS安装盘</h2><ol>
+<li>选择目标U盘</li>
+<li>右键选“Format Disk for Mac”等待转换完成</li>
+<li>右键选择“Restore with Disk Image”选择下载好的dmg文件，后续等待完成即可</li>
+</ol>
+<h2 id="划分磁盘分区"><a href="#划分磁盘分区" class="headerlink" title="划分磁盘分区"></a>划分磁盘分区</h2><ol>
+<li>利用DG查看系统盘中EFI分区（又名ESP分区）空间是否大于200M,小于的话需要备份之后重建200M的分区，之后再将备份好的EFI文件拷入新建的EFI分区</li>
+<li>在目标磁盘中分出约50G的空间用于安装MAC OS（格式选择NTFS(MS Basic Data)）</li>
+</ol>
+<h2 id="安装MAC-OS"><a href="#安装MAC-OS" class="headerlink" title="安装MAC OS"></a>安装MAC OS</h2><ol>
+<li>重启进入BIOS</li>
+<li>设置UEFI为第一启动</li>
+<li>CSM需要关闭（如果有的话）</li>
+<li>开启AHCI</li>
+<li>关闭secure boot</li>
+<li>在BIOS设置U盘为第一启动，进入安装界面之后直接点击Boot OX X install from macOS High Sierra</li>
+<li>跑完代码之后点击“磁盘工具”，选择刚才划分的50G磁盘，格式为APFS，抹掉。</li>
+<li>关闭窗口，选择安装mac OS,选择目标盘即可</li>
+<li>跑完之后，随后自动重启以U盘进入，选择Boot macOS from “你的目标盘的名字”</li>
+<li>之后还有两次跑代码，重复第五步两次，最后会设置键盘布局以及账号之类的。</li>
+<li>重启之后在Windows系统中利用DG将U盘中的ESP中的EFI的CLOVER文件拷入硬盘的ESP分区中的EFI中。<strong>提示</strong>：拷贝的时候可以右键目标盘建立盘符后操作；两个磁盘的话（即Windows一个盘，MAC OS一个盘），只需将ESP中的EFI的CLOVER文件拷入Windows硬盘的ESP分区中的EFI中即可。</li>
+<li>安装UEFI Free后，选择添加启动项，选择linux或者其他操作系统，描述中填写启动项的名字，然后选择Windows下的ESP分区，文件路径中选择EFI-CLOVER-CLOVERX64.EFI，点击“确定”后。</li>
+<li>重启选择Boot macOS from “你的目标盘的名字”进入MAC OS系统。</li>
+</ol>
+<h1 id="后期调试"><a href="#后期调试" class="headerlink" title="后期调试"></a>后期调试</h1><h2 id="驱动安装和系统维护"><a href="#驱动安装和系统维护" class="headerlink" title="驱动安装和系统维护"></a>驱动安装和系统维护</h2><ol>
+<li>由于I5-7300HQ的核显是HD630,因此，可以选择只驱动独显或者只驱动核显都可以，看个人需要。选择的时候将笔者提供的EFI中的CLOVER文件拷贝Windows下的ESP分区中的EFI中即可（二选一）</li>
+<li>由于PH65的主板上的ALC892声卡驱动的问题复杂性，笔者在尝试过多次之后（包括最新的万能声卡以及相关的驱动软件，均可驱动，但无声音），因此只能选择耳机可用，声卡由于主板的特殊性，不能光看型号，因此具有一定的残缺。</li>
+<li>USB驱动、电源驱动、有线网卡驱动以及亮度调节等等都可以正常使用，后续有能力的话可在这个基础上进行修改。</li>
+<li>关于无线网卡驱动，笔者选择暂时采用HoRNDIS驱动，在官网<a href="https://www.joshuawise.com/horndis" target="_blank" rel="noopener">HoRNDIS</a>上下载最新版安装后选择USB网络共享，并且支持移动蜂窝网络和无线网络共享速度基本能达到本身宽带峰值。<strong>注意</strong>：MIUI系统的话需要开启USB调试功能。</li>
+</ol>
+<hr>
+<p><a href="https://pan.baidu.com/s/1AR7BeYsY1nG9JDxXHAfRNQ" target="_blank" rel="noopener"><strong>相关工具下载</strong>    w79j</a><br><a href="https://pan.baidu.com/s/1eNBN-WeKgvevmn8D2s6s8w" target="_blank" rel="noopener"><strong>镜像下载</strong>    9wtt</a></p>
+<p>作者 [@BUAA-RongYi]<br>2018 年 07月 26日    </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="/images/1.png" alt="Jack 比特币"/>
+        <p>比特币</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/24/人是怎么一步步废掉的/" rel="prev" title="人是怎么一步步废掉的">
+                人是怎么一步步废掉的 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/blog-logo.jpg"
+                alt="Jack" />
+            
+              <p class="site-author-name" itemprop="name">Jack</p>
+              <p class="site-description motion-element" itemprop="description">你是否愿意为了做你喜欢做的事而先把那些你不喜欢的做好，这是你衡量自己是否成熟的一个重要标志。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/BUAA-RongYi" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/rong-yi-43-85/activities" target="_blank" title="Zhihu">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Zhihu</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+<br>
+
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=864711417&auto=1&height=66">
+    </iframe>
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工作"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备以下几项工具-Todo-列表"><span class="nav-number">2.1.</span> <span class="nav-text">准备以下几项工具 Todo 列表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#制作流程"><span class="nav-number">3.</span> <span class="nav-text">制作流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在Windows下安装TransMac"><span class="nav-number">3.1.</span> <span class="nav-text">在Windows下安装TransMac</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#制作MAC-OS安装盘"><span class="nav-number">3.2.</span> <span class="nav-text">制作MAC OS安装盘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#划分磁盘分区"><span class="nav-number">3.3.</span> <span class="nav-text">划分磁盘分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装MAC-OS"><span class="nav-number">3.4.</span> <span class="nav-text">安装MAC OS</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后期调试"><span class="nav-number">4.</span> <span class="nav-text">后期调试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#驱动安装和系统维护"><span class="nav-number">4.1.</span> <span class="nav-text">驱动安装和系统维护</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jack</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">5.2k</span>
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+<!-- <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+-->
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">小生一共码了5.2k字啦，哇卡卡卡</span>
+</div>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://一言堂.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/07/26/神舟Z7-KP5D1黑苹果安装教程/';
+          this.page.identifier = '2018/07/26/神舟Z7-KP5D1黑苹果安装教程/';
+          this.page.title = '神舟Z7-KP5D1黑苹果安装教程';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://一言堂.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'lXDQOPNERtijiXp1cWM1swpd-gzGzoHsz',
+        appKey: 'O2Q8BuJidFS92LD4Mr1ySVoj',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+<script type="text/javascript" src="/js/src/love.js"></script>>
