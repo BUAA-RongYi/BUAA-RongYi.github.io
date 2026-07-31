@@ -1,0 +1,248 @@
+# =====================================================================================
+# 戎小毅 个人博客 - Hugo + FixIt 主题
+# =====================================================================================
+
+# -------------------------------------------------------------------------------------
+# Hugo 基本配置
+# -------------------------------------------------------------------------------------
+title = "戎小毅"
+baseURL = "https://buaa-rongyi.github.io/"
+theme = "FixIt"
+defaultContentLanguage = "zh-cn"
+locale = "zh-CN"
+hasCJKLanguage = true
+timeZone = "Asia/Shanghai"
+enableRobotsTXT = true
+enableEmoji = true
+copyright = "戎小毅"
+paginate = 6
+
+[frontmatter]
+_merge = "shallow"
+lastmod = ["lastmod", ":fileModTime", ":default"]
+
+[imaging]
+_merge = "shallow"
+[imaging.jpeg]
+quality = 80
+[imaging.webp]
+quality = 80
+
+# -------------------------------------------------------------------------------------
+# 菜单配置
+# -------------------------------------------------------------------------------------
+[menus]
+
+[[menus.main]]
+identifier = "home"
+name = "首页"
+url = "/"
+weight = 1
+[menus.main.params]
+icon = "fa-solid fa-home"
+
+[[menus.main]]
+identifier = "archives"
+name = "归档"
+url = "/archives/"
+weight = 2
+[menus.main.params]
+icon = "fa-solid fa-archive"
+
+[[menus.main]]
+identifier = "tags"
+name = "标签"
+url = "/tags/"
+weight = 3
+[menus.main.params]
+icon = "fa-solid fa-tags"
+
+# -------------------------------------------------------------------------------------
+# Markup 配置
+# -------------------------------------------------------------------------------------
+[markup]
+_merge = "shallow"
+
+[markup.highlight]
+codeFences = true
+noClasses = false
+lineNos = true
+lineNumbersInTable = true
+
+[markup.goldmark]
+[markup.goldmark.extensions]
+definitionList = true
+footnote = true
+linkify = true
+table = true
+taskList = true
+typographer = true
+[markup.goldmark.renderer]
+unsafe = true
+
+# -------------------------------------------------------------------------------------
+# Outputs 配置
+# -------------------------------------------------------------------------------------
+[outputs]
+_merge = "shallow"
+home = ["html", "rss", "archives", "search", "offline", "manifest"]
+page = ["html", "markdown"]
+section = ["html", "rss"]
+taxonomy = ["html"]
+term = ["html", "rss"]
+
+# -------------------------------------------------------------------------------------
+# Taxonomies 配置
+# -------------------------------------------------------------------------------------
+[taxonomies]
+_merge = "shallow"
+category = "categories"
+tag = "tags"
+
+# =====================================================================================
+# 主题参数
+# =====================================================================================
+[params]
+version = "1.0.X"
+description = "你是否愿意为了做你喜欢做的事而先把那些你不喜欢的做好，这是你衡量自己是否成熟的一个重要标志。"
+keywords = ["博客", "技术", "生活", "思考"]
+default_theme = "auto"
+date_format = "2006-01-02"
+with_site_title = true
+title_delimiter = " | "
+
+# 页面级参数
+capitalize_titles = false
+author_avatar = true
+show_lastmod = true
+word_count = true
+reading_time = true
+end_flag = "—— EOF ——"
+
+# 许可证
+license = '<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
+
+# 代码块
+[params.codeblock]
+wrapper = true
+mode = "classic"
+max_shown_lines = 10
+copyable = true
+
+# TOC 目录
+[params.toc]
+enable = true
+auto = true
+position = "right"
+start_level = 2
+end_level = 4
+
+# 作者配置
+[params.author]
+name = "Jack"
+link = "https://github.com/BUAA-RongYi"
+avatar = "/images/blog-logo.jpg"
+
+# 头部配置
+[params.header]
+desktop_mode = "sticky"
+mobile_mode = "auto"
+
+[params.header.title]
+name = "戎小毅"
+
+[params.header.subtitle]
+name = "三千微尘里，吾宁爱与憎"
+
+# 首页配置
+[params.home.profile]
+enable = true
+avatar_url = "/images/blog-logo.jpg"
+title = "戎小毅"
+subtitle = "三千微尘里，吾宁爱与憎"
+typeit = true
+social = true
+
+[params.home.posts]
+enable = true
+paginate = 6
+
+# 社交链接
+[params.social]
+GitHub = "BUAA-RongYi"
+Zhihu = "rong-yi-43-85"
+RSS = true
+
+# 页脚配置
+[params.footer]
+enable = true
+copyright = true
+since = "2018"
+
+[params.footer.powered]
+enable = true
+hugo_logo = false
+theme_logo = false
+
+# 搜索
+[params.search]
+enable = true
+type = "fuse"
+placeholder = "搜索文章..."
+max_result_length = 10
+
+# 归档
+[params.archives]
+paginate = 20
+date_format = "01-02"
+
+# 标签云
+[params.tag_cloud]
+enable = true
+min = 14
+max = 28
+orderby = "name"
+
+# 文章导航
+[params.navigation]
+in_section = false
+
+# 分享
+[params.share]
+enable = true
+Twitter = false
+Facebook = false
+Weibo = true
+
+# 相关文章
+[params.related]
+enable = true
+count = 5
+position = ["footer"]
+
+# 不蒜子统计
+[params.busuanzi]
+enable = true
+site_views = true
+page_views = true
+
+# 评论（暂不启用，后续可加 Giscus）
+[params.comment]
+enable = false
+
+# 返回顶部
+[params.back_to_top]
+enable = true
+
+# SEO
+[params.seo]
+cover = "/images/blog-logo.jpg"
+
+[params.seo.publisher]
+name = "Jack"
+logo_url = "/images/blog-logo.jpg"
+
+# 兼容性
+[params.compatibility]
+polyfill = false
+object_fit = false
