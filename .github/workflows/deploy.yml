@@ -1,0 +1,44 @@
+name: Deploy Hugo to GitHub Pages
+
+on:
+  push:
+    branches: [source]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.163.0"
+          extended: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Dart Sass (sass-embedded)
+        run: npm install -g sass-embedded
+
+      - name: Build Hugo
+        run: hugo --minify
+
+      - name: Deploy to master branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: master
+          publish_dir: ./public
+          force_orphan: true
+          cname: ""
