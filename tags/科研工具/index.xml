@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>科研工具 - 标签 | 戎小毅</title><link>https://buaa-rongyi.github.io/tags/%E7%A7%91%E7%A0%94%E5%B7%A5%E5%85%B7/</link><description>你是否愿意为了做你喜欢做的事而先把那些你不喜欢的做好，这是你衡量自己是否成熟的一个重要标志。</description><generator>Hugo 0.163.0 &amp; FixIt v1.0.0-alpha</generator><language>zh-CN</language><copyright>戎小毅</copyright><lastBuildDate>Wed, 07 Nov 2018 21:00:00 +0800</lastBuildDate><atom:link href="https://buaa-rongyi.github.io/tags/%E7%A7%91%E7%A0%94%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>EndNote批量导入引文信息及自动更新文献信息</title><link>https://buaa-rongyi.github.io/posts/2018-11-07-endnote-citations/</link><pubDate>Wed, 07 Nov 2018 21:00:00 +0800</pubDate><guid>https://buaa-rongyi.github.io/posts/2018-11-07-endnote-citations/</guid><category domain="https://buaa-rongyi.github.io/categories/%E5%AD%A6%E6%9C%AF/">学术</category><description>&lt;h2 class="heading-element" id="前言"&gt;&lt;span&gt;前言&lt;/span&gt;
+ &lt;a href="#%e5%89%8d%e8%a8%80" class="heading-mark"&gt;&lt;svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"&gt;&lt;path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;摘录自公众号&amp;quot;科研利器&amp;quot;，主要是为了自己查看，侵删。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;向EndNote导入文献的时候，可以直接在软件里利用Web of Science检索并导入，也可以将文献的&lt;strong&gt;引文信息文件&lt;/strong&gt;（后缀为 &lt;strong&gt;.enw&lt;/strong&gt; 和 &lt;strong&gt;.ris&lt;/strong&gt;）下载到本地之后导入。&lt;/p&gt;
+&lt;p&gt;下面是具体内容：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;引文信息文件的获取和导入&lt;/li&gt;
+&lt;li&gt;批量导入多个引文文件（附代码）&lt;/li&gt;
+&lt;li&gt;巧用WOS检索标记功能批量导入&lt;/li&gt;
+&lt;li&gt;从引文分析利器Histcite导入&lt;/li&gt;
+&lt;li&gt;如何更新引文信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</description></item></channel></rss>
